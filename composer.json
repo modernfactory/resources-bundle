@@ -1,0 +1,24 @@
+{
+  "name": "modernfactory/resources-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony ModernFactoryResourcesBundle",
+  "keywords": ["Maintenance"],
+  "homepage": "http://modernfactory.pl",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marcin Szepczyński",
+      "email": "marcin@modernfactory.pl"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.9"
+  },
+  "require-dev": {
+  },
+  "suggest": {
+  },
+  "autoload": {
+    "psr-4": { "ModernFactory\\ResourcesBundle\\": "" }
+  }
+}
