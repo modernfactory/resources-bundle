@@ -1,6 +1,6 @@
 <?php
 
-namespace ModernFactory\ResourceBundle\Doctrine\ORM;
+namespace ModernFactory\ResourcesBundle\Doctrine\ORM;
 
 use Doctrine\ORM\EntityRepository as BaseEntityRepository;
 use Doctrine\ORM\QueryBuilder;

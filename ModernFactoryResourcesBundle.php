@@ -1,6 +1,6 @@
 <?php
 
-namespace ModernFactory\ResourceBundle;
+namespace ModernFactory\ResourcesBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
