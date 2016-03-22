@@ -18,7 +18,7 @@ class EntityRepository extends BaseEntityRepository implements RepositoryInterfa
     /**
      * {@inheritdoc}
      */
-    public function add(ResourceInterface $resource)
+    public function save(ResourceInterface $resource)
     {
         $this->_em->persist($resource);
         $this->_em->flush();

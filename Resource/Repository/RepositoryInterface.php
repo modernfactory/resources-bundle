@@ -25,7 +25,7 @@ interface RepositoryInterface extends ObjectRepository
     /**
      * @param ResourceInterface $resource
      */
-    public function add(ResourceInterface $resource);
+    public function save(ResourceInterface $resource);
 
     /**
      * @param ResourceInterface $resource
