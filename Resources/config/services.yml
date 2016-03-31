@@ -1,13 +1,17 @@
 parameters:
-    sylius.twig.extension.resource.pagination_template: 'ModernFactoryResourcesBundle:Twig:paginate.html.twig'
-    sylius.twig.extension.resource.sorting_template: 'ModernFactoryResourcesBundle:Twig:sorting.html.twig'
+    resources_bundle.twig.extension.resource.pagination_template: 'ModernFactoryResourcesBundle:Twig:paginate.html.twig'
+    resources_bundle.twig.extension.resource.sorting_template: 'ModernFactoryResourcesBundle:Twig:sorting.html.twig'
 
 services:
-    sylius.controller.parameters:
+    resources_bundle.controller.parameters:
         class: ModernFactory\ResourcesBundle\Controller\Parameters
-    sylius.twig.extension.resource:
+    resources_bundle.twig.extension.resource:
         class: ModernFactory\ResourcesBundle\Twig\ResourceExtension
         tags:
             - { name: twig.extension }
             - { name: kernel.event_listener, event: kernel.request, method: fetchRequest }
-        arguments: ['@router', '@sylius.controller.parameters', '%sylius.twig.extension.resource.pagination_template%', '%sylius.twig.extension.resource.sorting_template%']
+        arguments:
+            - '@router'
+            - '@resources_bundle.controller.parameters'
+            - '%resources_bundle.twig.extension.resource.pagination_template%'
+            - '%resources_bundle.twig.extension.resource.sorting_template%'

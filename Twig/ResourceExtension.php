@@ -75,12 +75,12 @@ class ResourceExtension extends \Twig_Extension
     {
         return [
              new \Twig_SimpleFunction(
-                 'sylius_resource_sort',
+                 'resources_bundle_sort',
                  [$this, 'renderSortingLink'],
                  ['needs_environment' => true, 'is_safe' => ['html']]
              ),
              new \Twig_SimpleFunction(
-                 'sylius_resource_paginate',
+                 'resources_bundle_paginate',
                  [$this, 'renderPaginateSelect'],
                  ['needs_environment' => true, 'is_safe' => ['html']]
              ),
@@ -195,7 +195,7 @@ class ResourceExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'sylius_resource';
+        return 'resources_bundle';
     }
 
     /**
